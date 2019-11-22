@@ -94,6 +94,7 @@ namespace StarChart.Controllers
             if (!celestialObjects.Any())
                 return NotFound();
             _context.CelestialObjects.RemoveRange(celestialObjects);
+            _context.SaveChanges();
             return NoContent();
         }
     }
